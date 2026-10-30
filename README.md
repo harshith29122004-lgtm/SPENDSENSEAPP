@@ -12,7 +12,7 @@ SpendSense is a React and TypeScript expense-management prototype. It provides a
 - Income, expense, and balance summaries.
 - Budget tracking and Recharts visualizations.
 - Gemini-powered expense insights through a server-side API.
-- Browser local-storage persistence for this prototype.
+- Browser local-storage persistence with cross-tab synchronization.
 
 ## Technology
 
@@ -32,7 +32,7 @@ SpendSense is a React and TypeScript expense-management prototype. It provides a
 ```bash
 git clone https://github.com/harshith29122004-lgtm/SPENDSENSEAPP.git
 cd SPENDSENSEAPP
-npm ci
+npm install
 ```
 
 Copy `.env.example` to `.env` and set your server-side Gemini key:
@@ -73,6 +73,7 @@ Deploy the frontend and API behind the same-origin reverse proxy (route `/api/*`
 - The rate limiter is per process; production deployments with multiple instances should use a shared rate-limit store and platform-level abuse protection.
 - The API does not implement user authentication. Anyone who can reach the endpoint may request analysis, subject to rate limits. Add authenticated server-side sessions and per-user authorization before public deployment.
 - The app's demo sign-in is not secure authentication. Passwords and application data remain in browser local storage. Do not reuse real passwords or enter real financial data.
+- Local storage is client-side convenience storage, not encrypted storage. The hook handles functional React updates and malformed cross-tab events but does not make stored data private or tamper-proof.
 - AI output is informational and may be inaccurate. Review it rather than treating it as financial advice.
 
 ## Repository
