@@ -1,22 +1,26 @@
 {
   "name": "spendsense",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently -k \"npm:dev:api\" \"vite\"",
+    "dev:api": "node server/api.mjs",
+    "start:api": "node server/api.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test server/*.test.mjs"
   },
   "dependencies": {
-    "react-dom": "^19.2.0",
     "@google/genai": "^1.28.0",
     "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "recharts": "^3.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.2.1",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }

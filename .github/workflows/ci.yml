@@ -1,17 +1,16 @@
-name: CI
+name: SpendSense CI
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -19,8 +18,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: npm
       - name: Install dependencies
-        run: npm install
-      - name: Build production bundle
+        run: npm ci
+      - name: Run API validation tests
+        run: npm test
+      - name: Build frontend
         run: npm run build
