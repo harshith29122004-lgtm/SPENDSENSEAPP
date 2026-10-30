@@ -1,153 +1,56 @@
-<h1 align="center">💰 SpendSense – Smart Expense Manager</h1>
+# SpendSense — Smart Expense Manager
 
-<p align="center">
-  <b>Track Your Money. Manage Your Expenses. Build Better Financial Habits.</b>
-</p>
+SpendSense is an expense-management project focused on helping users record income and expenses and understand their spending.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Kotlin-Programming-purple?logo=kotlin" />
-  <img src="https://img.shields.io/badge/Jetpack%20Compose-UI-blue?logo=jetpackcompose" />
-  <img src="https://img.shields.io/badge/Android-Development-green?logo=android" />
-  <img src="https://img.shields.io/badge/Database-Room-orange" />
-</p>
+## Repository implementation note
 
----
+The current code in this repository is a **React, TypeScript, and Vite web application**. This README describes the checked-in implementation rather than the separate Kotlin/Jetpack Compose Android version described in earlier project notes.
 
-## 📌 About the Project
+## Current technology
 
-**SpendSense** is a Smart Expense Manager Android application developed using Kotlin and Jetpack Compose.
+- React 19
+- TypeScript
+- Vite
+- Recharts
+- Google GenAI package (dependency present in the project)
 
-The application is designed to help users manage their daily income and expenses efficiently. It provides a convenient way to track financial transactions, monitor spending activities, and maintain better control over personal finances.
+## Project focus
 
-The main objective of SpendSense is to simplify personal expense management through an easy-to-use Android application.
+- Organize income and expense information.
+- Support a clear expense-management interface.
+- Present financial information through visual components where implemented.
+- Keep the application straightforward to use.
 
----
+## Run locally
 
-## 🎯 Project Objectives
+### Prerequisites
 
-* Track daily income and expenses.
-* Simplify personal financial management.
-* Maintain transaction records.
-* Monitor spending activities.
-* Provide an easy-to-use interface.
-* Help users develop better financial habits.
+- Node.js
+- npm
 
----
-
-## 🛠️ Technologies Used
-
-| Technology      | Purpose                       |
-| --------------- | ----------------------------- |
-| Kotlin          | Primary programming language  |
-| Jetpack Compose | Modern Android UI development |
-| Room Database   | Local database management     |
-| Android Studio  | Development environment       |
-| Gradle          | Project build management      |
-
----
-
-## ✨ Key Features
-
-* 💰 **Income Tracking** – Manage and record income.
-* 💸 **Expense Tracking** – Record daily expenses.
-* 📊 **Expense Management** – Organize financial transactions.
-* 🗄️ **Local Database** – Store transaction information using Room Database.
-* 📱 **User-Friendly Interface** – Modern Android interface using Jetpack Compose.
-* 📈 **Financial Monitoring** – Keep track of personal financial activities.
-
----
-
-## 📂 Project Structure
-
-```text
-SpendSense/
-│
-├── app/
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/
-│   │       │   └── com/
-│   │       │       └── spendsense/
-│   │       │
-│   │       ├── res/
-│   │       └── AndroidManifest.xml
-│   │
-│   └── build.gradle.kts
-│
-├── gradle/
-├── build.gradle.kts
-├── settings.gradle.kts
-└── README.md
-```
-
----
-
-## ⚙️ Installation & Setup
-
-Follow these steps to run the application locally.
-
-**1. Clone the Repository**
+### Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/SpendSense.git
+git clone https://github.com/harshith29122004-lgtm/SPENDSENSEAPP.git
+cd SPENDSENSEAPP
+npm install
+npm run dev
 ```
 
-**2. Open in Android Studio**
+Open the local development URL printed by Vite.
 
-* Launch Android Studio.
-* Select Open Project.
-* Choose the SpendSense folder.
+## Build
 
-**3. Sync Gradle**
+```bash
+npm run build
+```
 
-Allow Android Studio to download the required dependencies and complete Gradle synchronization.
+## Notes
 
-**4. Run the Application**
+- The application uses browser-side storage in its current implementation; clearing browser data may affect locally stored information.
+- Keep API keys and other secrets out of source control.
+- The Android/Kotlin implementation should be maintained in its own repository or branch if it is to be showcased separately.
 
-* Connect an Android device or start an emulator.
-* Click the Run button.
-* The application will be installed and launched.
+## Repository
 
----
-
-## 📱 Application Details
-
-* **Project Name:** SpendSense
-* **Platform:** Android
-* **Language:** Kotlin
-* **UI Framework:** Jetpack Compose
-* **Database:** Room Database
-* **IDE:** Android Studio
-
----
-
-## 🔮 Future Enhancements
-
-* Monthly and yearly expense reports.
-* Interactive financial charts.
-* Budget planning and management.
-* Expense category analysis.
-* Export transaction reports.
-* Cloud backup and synchronization.
-
----
-
-## 👨‍💻 Developer
-
-**Harshith D S**
-
-Information Science Engineering Graduate | Android Developer | Software Developer
-
-📧 Email: [harshith29122004@gmail.com](mailto:harshith29122004@gmail.com)
-
-🔗 LinkedIn: https://www.linkedin.com/in/harshith-ds-7a786030b
-
----
-
-<p align="center">
-  ⭐ If you find this project interesting, consider giving it a star!
-</p>
-
-<p align="center">
-  <b>Built with ❤️ using Kotlin and Jetpack Compose</b>
-</p>
+[View the source code](https://github.com/harshith29122004-lgtm/SPENDSENSEAPP)
